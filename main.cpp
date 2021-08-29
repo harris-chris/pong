@@ -8,6 +8,7 @@
 #include <SDL2/SDL.h>
 
 #include "parse_args.h"
+#include "init.h"
 
 using std::cout, std::string, std::endl;
 
@@ -20,6 +21,7 @@ int main(int argc, const char * argv[])
   //SDL_Surface* surface = NULL;
   
   std::map<string, string> parsed = ParseArgs(argc, argv);
+  int i = init(parsed);
   cout << "Finishing" << endl;
 
 }
